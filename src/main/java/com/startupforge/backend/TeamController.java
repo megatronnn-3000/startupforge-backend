@@ -4,7 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 // This allows your HTML file to talk to Java
-@CrossOrigin(origins = "*") // Allow ANY website to talk to me
+// ✅ Allow BOTH the Netlify link (for testing) AND the new Domain
+@CrossOrigin(origins = {
+        "https://happy-otter-123456.netlify.app",
+        "https://www.eismuj.com",
+        "https://eismuj.com"
+}) // Allow ANY website to talk to me
 @RestController
 @RequestMapping("/api")
 public class TeamController {
