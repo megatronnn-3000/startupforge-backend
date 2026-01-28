@@ -3,9 +3,10 @@ package com.startupforge.backend;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+// This allows your HTML file to talk to Java
+@CrossOrigin(origins = "*") // Allow ANY website to talk to me
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*") // This allows your HTML file to talk to Java
 public class TeamController {
 
     @Autowired
